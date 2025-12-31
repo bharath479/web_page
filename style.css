@@ -7,42 +7,42 @@
 
 body {
   height: 100vh;
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
+  background: linear-gradient(135deg, #141e30, #243b55);
   color: white;
 }
 
 .banner {
   text-align: center;
-  padding: 50px;
-  background: rgba(255, 255, 255, 0.1);
+  padding: 50px 70px;
   border-radius: 20px;
-  box-shadow: 0 0 30px rgba(255, 215, 0, 0.4);
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+  max-width: 800px;
   animation: fadeIn 2s ease-in-out;
 }
 
 .banner h1 {
   font-size: 3rem;
-  margin-bottom: 15px;
   color: gold;
+  margin-bottom: 10px;
 }
 
-.banner p {
+.subtitle {
   font-size: 1.2rem;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 
 button {
-  padding: 12px 30px;
+  padding: 12px 35px;
   font-size: 1rem;
   border: none;
   border-radius: 30px;
-  cursor: pointer;
   background: gold;
   color: #333;
+  cursor: pointer;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -51,16 +51,71 @@ button:hover {
   box-shadow: 0 0 15px gold;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: scale(0.9); }
-  to { opacity: 1; transform: scale(1); }
+#message {
+  margin-top: 30px;
+  line-height: 1.8;
+  animation: slideUp 1.2s ease-in-out;
 }
 
-canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
+#message p {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
 }
-canvas.hidden {
+
+#message h2 {
+  margin-top: 20px;
+  color: pink;
+  font-size: 2rem;
+}
+
+.hidden {
   display: none;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 600px) {
+  .banner {
+    padding: 30px 20px;
+  }
+
+  .banner h1 {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  button {
+    padding: 10px 25px;
+    font-size: 0.9rem;
+  }
+
+  #message p {
+    font-size: 1rem;
+  }
+
+  #message h2 {
+    font-size: 1.5rem;
+  }
 }
