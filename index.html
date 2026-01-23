@@ -8,7 +8,70 @@
 <body>
 
   <div class="banner">
-    <h1>🎆 Happy New Year 2026 🎆</h1>
+    <h1>🎆 Wishing You A Very Happy New Year Kandregula Purna Chandrakala 🎆</h1>
+    <p class="subtitle">Wishing you joy, success, and new beginnings</p>
+
+    <div class="buttons">
+      <button onclick="showMessage()">Message 🎉</button>
+      <button onclick="showLove()">❤️ Special ❤️</button>
+    </div>
+
+    <div id="message" class="hidden">
+      <p>
+        I hope something incredible happens to you in the New Year.  
+        I want to see you succeed, and I want to watch you crush every single
+        goal you've been chasing.
+      </p>
+
+      <p>
+        One thing I'm thankful to this year is it's you. Thank you for coming
+        into my life, thank you for the conversations, thank you for everything.
+        It’s been 2 months since we got to know each other, and here we are —
+        never imagined we would make it this far.
+        On this special day, I really want to tell you something.
+        I’m a little afraid of how you might react, but yeah!!!
+      </p>
+    </div>
+
+    <h2 id="love" class="hidden">❤️ LOVE YOU CHANDRAKALA GARU ❤️</h2>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+root@newyear-web:/var/www/html# vi index.html 
+root@newyear-web:/var/www/html# systemctl restart nginx
+root@newyear-web:/var/www/html# ls
+Dockerfile  index.html  script.js  style.css
+root@newyear-web:/var/www/html# cat script.js 
+function showMessage() {
+  document.getElementById("message").classList.remove("hidden");
+}
+
+function showLove() {
+  document.getElementById("love").classList.remove("hidden");
+}
+
+root@newyear-web:/var/www/html# vi style.css 
+root@newyear-web:/var/www/html# vi script.js 
+root@newyear-web:/var/www/html# systemctl restart nginx
+root@newyear-web:/var/www/html# vi style.css 
+root@newyear-web:/var/www/html# vi index.html 
+root@newyear-web:/var/www/html# cat index.html 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy New Year</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <div class="banner">
+    <h1>🎆 Wishing You A Very Happy New Year Kandregula Purna Chandrakala 🎆</h1>
     <p class="subtitle">Wishing you joy, success, and new beginnings</p>
 
     <button onclick="showMessage()">Message 🎉</button>
@@ -21,8 +84,8 @@
       </p>
 
       <p>
-        On this special day, I want to tell you something.  
-        I'm a little afraid of how you might react, but yes…
+        One thing I'm thankful to this year is it's you, Thankyou for coming into my life, Thankyou for the conversations, Thankyou for everything and it is 2 months since we got to know eachother and here we are, never imagined we will make this far.
+        On this special day, I really want to tell you a thing. Yeah ofcourse, I'm little afraid of how you might react, but yeah!!!
       </p>
 
       <h2>❤️ LOVE YOU CHANDRAKALA GARU ❤️</h2>

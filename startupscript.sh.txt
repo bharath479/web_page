@@ -1,0 +1,17 @@
+#!/bin/bash
+set -e
+
+apt update -y
+apt install -y nginx git
+
+systemctl start nginx
+systemctl enable nginx
+
+rm -rf /var/www/html/*
+
+git clone https://github.com/bharath479/web_page.git /var/www/html
+
+chown -R www-data:www-data /var/www/html
+chmod -R 755 /var/www/html
+
+systemctl restart nginx

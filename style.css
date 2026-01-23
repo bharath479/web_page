@@ -20,14 +20,14 @@ body {
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.12);
   box-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
-  max-width: 800px;
+  max-width: 900px;
   animation: fadeIn 2s ease-in-out;
 }
 
 .banner h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: gold;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .subtitle {
@@ -35,6 +35,16 @@ body {
   margin-bottom: 30px;
 }
 
+/* 🔘 Button container */
+.buttons {
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* 🔘 Buttons */
 button {
   padding: 12px 35px;
   font-size: 1rem;
@@ -51,8 +61,9 @@ button:hover {
   box-shadow: 0 0 15px gold;
 }
 
+/* 📩 Message section */
 #message {
-  margin-top: 30px;
+  margin-top: 20px;
   line-height: 1.8;
   animation: slideUp 1.2s ease-in-out;
 }
@@ -62,16 +73,20 @@ button:hover {
   margin-bottom: 15px;
 }
 
-#message h2 {
-  margin-top: 20px;
-  color: pink;
+/* ❤️ Love text */
+#love {
+  margin-top: 25px;
   font-size: 2rem;
+  color: pink;
+  animation: fadeIn 1.5s ease-in-out;
 }
 
+/* 🔒 Hidden state */
 .hidden {
   display: none;
 }
 
+/* ✨ Animations */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -93,29 +108,34 @@ button:hover {
     transform: translateY(0);
   }
 }
-@media (max-width: 600px) {
-  .banner {
-    padding: 30px 20px;
-  }
+/* ❤️ Heart animation container */
+#hearts-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 9999; /* 🔥 IMPORTANT */
+}
 
-  .banner h1 {
-    font-size: 2rem;
-  }
+/* ❤️ Individual hearts */
+.heart {
+  position: absolute;
+  bottom: -20px;
+  font-size: 1.8rem;
+  animation: floatUp ease-in forwards;
+}
 
-  .subtitle {
-    font-size: 1rem;
+/* ❤️ Floating animation */
+@keyframes floatUp {
+  from {
+    transform: translateY(0) scale(1);
+    opacity: 1;
   }
-
-  button {
-    padding: 10px 25px;
-    font-size: 0.9rem;
-  }
-
-  #message p {
-    font-size: 1rem;
-  }
-
-  #message h2 {
-    font-size: 1.5rem;
+  to {
+    transform: translateY(-120vh) scale(1.5);
+    opacity: 0;
   }
 }
