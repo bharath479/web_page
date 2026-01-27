@@ -26,7 +26,7 @@ resource "google_artifact_registry_repository" "generic_repo" {
   location     = var.region_id
   repository_id = "generic-repo"
   description  = "Generic repository"
-  format       = "GENERIC_HTTP"
+  format       = "GENERIC"
 }
 resource "google_artifact_registry_repository_iam_member" "docker_repo_member" {
   provider = google
